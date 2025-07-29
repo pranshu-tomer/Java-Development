@@ -1,0 +1,15 @@
+<hibernate-configuration xmlns="http://www.hibernate.org/xsd/orm/cfg">
+    <session-factory>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/demo</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">mongoDB</property>
+
+        <!--<property name="hibernate.hbm2ddl.auto">create</property>-->
+        <!-- every time it drop table if exist, and then create one - because we say create-->
+
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <!--update check if you have table if not then it will create, otherwise alter the table-->
+        <property name="hibernate.show_sql">true</property>
+    </session-factory>
+</hibernate-configuration>
