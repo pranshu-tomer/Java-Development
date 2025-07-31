@@ -1,0 +1,23 @@
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="pra" class="org.voltrex.Dev">
+
+        <!--<bean id="pra" class="org.voltrex.Dev" autowire="byName,byType">-->
+
+        <!--setter injection-->
+        <!--<property name="age" value="12"/>-->
+
+        <!--Constructor injection-->
+        <!--<constructor-arg value="18"/>-->
+        <!--use index for more than one argument-->
+
+        <property name="laptop" ref="lap" />
+        <!--primary="true"-->
+    </bean>
+    <bean id="lap" class="org.voltrex.Laptop"></bean>
+</beans>
